@@ -20,7 +20,7 @@ container.appendChild(canvas);
 const ctx = canvas.getContext("2d");
 
 // Draw in the canvas for draw message received
-const socket = new WebSocket("ws://whiteboardthomasmd.herokuapp.com", "protocolOne");
+const socket = new WebSocket("wss://whiteboardthomasmd.herokuapp.com", "protocolOne");
 
 socket.addEventListener("message", event => {
     const message = JSON.parse(event.data);
